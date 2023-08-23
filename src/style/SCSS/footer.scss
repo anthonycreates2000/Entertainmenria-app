@@ -1,0 +1,37 @@
+@use './color-palette.scss' as color;
+@use './font-size.scss' as fontSize;
+@import "./font-family.scss";
+@import "./flexbox.scss";
+p{
+    @include fontSize.small;
+    padding: 5px;
+}
+.flex-column{
+    padding: 10px;
+}
+.flex-row{
+    flex-basis: 33.33%;
+}
+.right-border{
+    border-right: 1px dashed rgb(128, 128, 128);
+}
+footer{
+    border-top: 3px solid rgb(39, 39, 39); 
+    background: color.$colorPaletteThree;
+    color: white;
+    text-align: center;
+    padding-top: 5px;
+}
+img{
+    object-fit: cover;
+}
+.copyright{
+    background: rgb(36, 36, 36);
+    padding: 10px;
+    margin: 0px;
+}
+@media screen and (max-width: 700px){
+    .right-border{
+        border-right: 0;
+    }
+}

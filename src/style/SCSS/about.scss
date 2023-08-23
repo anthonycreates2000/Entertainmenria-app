@@ -1,0 +1,48 @@
+@use "../SCSS/color-palette.scss" as color;
+@use "../SCSS//font-size.scss" as fontSize;
+@import "./font-family.scss";
+
+.about-article{
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+.fa-cloud::before{
+    position: absolute;
+    font-size: 70px;
+    transform: translate(-20%, 25%);
+}
+.fa-cogs::before{
+    position: absolute;
+    font-size: 40px;
+    transform: translate(-120%, 200%);
+}
+.icons{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    border-radius: 100%;
+    animation: 1s circle-outline-animation infinite;
+    transform: translateX(-50%);
+}
+h1{
+    @include fontSize.large;
+}
+p{
+    @include fontSize.small;  
+}
+@keyframes circle-outline-animation{
+    0%{
+        border: 10px solid color.$colorPaletteTwo;
+    }
+    50%{
+        border: 10px solid color.$colorPaletteOne;
+    }
+    100%{
+        border: 10px solid color.$colorPaletteTwo;
+    }
+
+}

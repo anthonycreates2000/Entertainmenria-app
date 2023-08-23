@@ -1,0 +1,62 @@
+@use './color-palette.scss' as color;
+@use './font-size.scss' as fontSize;
+@import "./font-family.scss";
+@import "./flexbox.scss";
+.main-heading{
+    color: white;
+    margin: 20px 0;
+}
+img{
+    width: 100%;
+    box-shadow: 0px 0px 20px black;
+}
+.flex-column{
+    position: relative;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.heading-text{
+    background: #414141;
+    margin: 80px 0;
+    padding: 10px 0;
+    width: 80%;
+}
+.heading-text h1{
+    font-size: 35px;
+}
+.heading-text h1, .heading-text h2{
+    margin-left: 30px;
+}
+.flex-row{
+    padding: 10px;
+    position: relative;
+    flex-basis: 33.33%;
+    overflow-y: visible;
+}
+h1{
+    @include fontSize.large;
+    font-weight: 700;
+}
+h2{
+    @include fontSize.medium;
+}
+
+@media screen and (max-width: 700px){
+    .heading-text{
+        width: 100%;
+        text-align: center;
+    }
+    .heading-text h1, .heading-text h2{
+        margin-left: 0;
+    }
+    .heading-text h1{
+        font-size: 30px;
+    }
+    .image-grid{
+        position: relative;
+        width: 60%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

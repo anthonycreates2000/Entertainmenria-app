@@ -1,0 +1,11 @@
+
+.flex-column{
+    display: flex;
+    flex-direction: row;
+}
+@media screen and (max-width: 700px){
+    .flex-column{
+        flex-direction: column;
+    }
+    
+}

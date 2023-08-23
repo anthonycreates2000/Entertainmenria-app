@@ -1,0 +1,81 @@
+@use './color-palette.scss' as color;
+@use './font-size.scss' as fontSize;
+@use "./flexbox.scss" as flexbox;
+@import url("https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+@import "./font-family.scss";
+
+$numberFlexRow: 95%;
+$border-style: 10px solid color.$colorPaletteOne;
+
+.trending-music{
+    margin: 20px 0;
+    padding: 5px;
+    width: 100%;
+    color: white;
+    border-top: $border-style;
+    border-bottom: $border-style;
+}
+h1{
+    text-align: center;
+    @include fontSize.large;
+}
+h2{
+    @include fontSize.medium;
+}
+.status-message{
+    @include fontSize.small;
+    text-align: center;
+}
+.card-image .small-text{
+    @include fontSize.medium;
+}
+.search-more-button, .try-again-button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#retry{
+    margin-bottom: 10px;
+}
+.flex-column{
+    margin-top: 10px;
+}
+.flex-row{
+    position: relative;
+    background: color.$colorPaletteThree;
+    margin: 10px;
+    flex-basis: 33.33%;
+}
+.flex-row text{
+    @include fontSize.medium;
+    position: absolute;
+    padding: 3px 17px;
+    top: 10px;
+    left: $numberFlexRow;
+    z-index: 1;
+    transform: translateX(-$numberFlexRow);
+    border-radius: 100%;
+    background: linear-gradient(180deg, rgba(74,74,74,0.7) 0%, rgba(96,96,96,0.4) 100%);
+    border: 2px solid color.$colorPaletteFive;
+    box-shadow: 0px 5px 1px color.$colorPaletteOne;
+}
+.flex-row img{
+    width: 100%;
+}
+.card-image{
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgb(116, 116, 116);
+}
+.card-image .custom-padding{
+    width: 100%;
+    background: rgba(143, 143, 143, 0.5);
+    padding: 0px;
+    margin: 0px;
+}
+@media screen and (max-width: 700px){
+    img{
+        max-height: 400px;
+    }
+}
