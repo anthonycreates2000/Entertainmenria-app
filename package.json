@@ -1,0 +1,36 @@
+{
+  "name": "entertainmenria",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.prod.js",
+    "compile-css": "node-sass --include-path scss src/style/main.scss src/style/main.css",
+    "start-dev": "webpack-dev-server --config webpack.dev.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "imagemin-jpegtran": "^7.0.0",
+    "imagemin-optipng": "^8.0.0",
+    "sass": "1.26.10",
+    "webpack": "^4.44.0",
+    "webpack-cli": "^3.3.12"
+  },
+  "devDependencies": {
+    "buble": "^0.20.0",
+    "buble-loader": "^0.5.1",
+    "cache-loader": "^4.1.0",
+    "css-loader": "^4.0.0",
+    "duplicate-package-checker-webpack-plugin": "^3.0.0",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "imagemin-webpack": "^5.1.1",
+    "sass-loader": "9.0.2",
+    "sass-to-string": "^1.1.0",
+    "style-loader": "^1.2.1",
+    "webpack-bundle-analyzer": "^3.8.0",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.0.9"
+  }
+}
